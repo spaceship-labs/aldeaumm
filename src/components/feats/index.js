@@ -37,8 +37,12 @@ const FeatsComponent = () => (
       <Rows align='space-between' wrap>
         <FeatsRows widthM='50%'>
           {
-            feats.map(feat => (
-              <FeatItem>
+            feats.map((feat, index) => (
+              <FeatItem
+                key={feat.title}
+                className='wow fadeInLeft'
+                data-wow-delay={`${.3*index}s`}
+              >
                 <img src={feat.img} />
                 <p>{feat.subtitle}</p>
                 <h3>{feat.title}</h3>
@@ -48,7 +52,7 @@ const FeatsComponent = () => (
           }
         </FeatsRows>
         <FeatImg widthM='40%'>
-          <img src={img} />
+          <img className='wow fadeInLeft' src={img} />
         </FeatImg>
       </Rows>
     </Container>

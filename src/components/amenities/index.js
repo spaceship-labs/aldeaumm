@@ -14,7 +14,7 @@ import AmenitieComponent from "./amenitie"
 const amenities = [
   {
     img: img1,
-    title: 'Alberca'
+    title: 'Alberca',
   },
   {
     img: img2,
@@ -50,15 +50,15 @@ const AmenitiesComponent = () => (
   <Section>
     <ContainerCommon style={{zIndex:1}}>
       <AmenitiesBox>
-        <h3>Amenidades</h3>
+        <h3 className='wow fadeInLeft'>Amenidades</h3>
         <Rows align='center' wrap mobileRow>
-          {amenities.map(amenitie => <AmenitieComponent {...amenitie} /> )}
+          {amenities.map((amenitie,index) => <AmenitieComponent key={amenitie.title} delay={`${.3*index}s`} {...amenitie} /> )}
         </Rows>
       </AmenitiesBox>
     </ContainerCommon>
     <Container style={{ zIndex: 0 }}>
       <Overlap>
-        <h3><em>Invierte en</em> <br /> Puerto Morelos</h3>
+        <h3 className='wow fadeInLeft'><em>Invierte en</em> <br /> Puerto Morelos</h3>
       </Overlap>
     </Container>
   </Section>

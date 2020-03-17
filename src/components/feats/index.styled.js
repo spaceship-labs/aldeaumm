@@ -17,8 +17,17 @@ export const FeatImg = styled(Row)`
   margin: 0 auto;
   img{
     width: 100%;
+    max-width: 180px;
+  }
+  ${({ theme }) => theme.MediaQueryMediumSmall}{
+    img{
+      max-width: 350px;
+    }
   }
   ${({ theme }) => theme.MediaQueryMedium}{
+    img{
+      max-width: inherit;
+    }
     top: -150px;
   }
 `
@@ -31,8 +40,10 @@ export const FeatsRows = styled(Row)`
 
 export const FeatItem = styled.div`
   color: ${({ theme }) => theme.GreenDark};
-  flex-basis: 45%;
   padding-bottom: 60px;
+  flex-basis: 80%;
+  margin: 0 auto;
+  text-align: center;
   img{
     margin-bottom: 25px;
   }
@@ -47,6 +58,8 @@ export const FeatItem = styled.div`
     line-height: 30px;
   }
   ${({ theme }) => theme.MediaQueryMediumSmall}{
+    flex-basis: 45%;
+    text-align: left;
     h3{
       font-size: ${({ theme }) => theme.TextSmallSubtitle};
       line-height: 40px;

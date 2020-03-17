@@ -9,9 +9,26 @@ import instagram from "../../theme/images/instagram.png"
 const FooterComponent = () => (
   <Footer>
     <Rows align='center' mobileRow>
-      <SocialItems href='/'><img alt='' src={facebook} /></SocialItems>
-      <SocialItems href='/'><img alt='' src={youtube} /></SocialItems>
-      <SocialItems href='/'><img alt='' src={instagram} /></SocialItems>
+      <SocialItems 
+        className='wow fadeInLeft' 
+        href='/'
+        >
+        <img alt='' src={facebook} />
+      </SocialItems>
+      <SocialItems 
+        className='wow fadeInLeft' 
+        data-wow-delay='0.3s'
+        href='/'
+        >
+        <img alt='' src={youtube} />
+      </SocialItems>
+      <SocialItems 
+        className='wow fadeInLeft' 
+        data-wow-delay='0.6s'
+        href='/'
+        >
+        <img alt='' src={instagram} />
+      </SocialItems>
     </Rows>
     <p>Copyright ©2020. Aldea Umm All rights reserved.</p>
   </Footer>

@@ -1,9 +1,9 @@
 import React from "react"
 import { BoxItem, BoxItemTitle, BoxItemFooter, BoxItemAmount } from "./index.styled"
 
-const BoxItemComponent = ({ title, amount, suffix, footer }) => {
+const BoxItemComponent = ({ title, amount, suffix, footer, delay }) => {
   return (
-    <BoxItem>
+    <BoxItem className='wow fadeInLeft' data-wow-delay={delay||'0s'}>
       <BoxItemTitle>{title}</BoxItemTitle>
       <BoxItemAmount>
         {amount}

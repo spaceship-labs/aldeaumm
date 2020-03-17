@@ -20,7 +20,7 @@ const DropdownComponent = () => {
           <p><input type='text' name='name' placeholder='Nombre' /></p>
           <p><input type='text' name='phone' placeholder='Teléfono' /></p>
           <p><input type='text' name='email' placeholder='Email' /></p>
-          <button type='submit'>Enviar</button>
+          <button type='submit'><span>Enviar</span></button>
         </form>
       </DropdownScreen>
     </DropdownWrap>

@@ -6,7 +6,7 @@ const DropdownWrap = styled.div`
 
 const DropdownAction = styled.button`
   background: transparent;
-  border: 2px solid ${({ theme }) => theme.GreenLighter};
+  border: 0 none;
   display: flex;
   align-items: center;
   color: #fff;
@@ -14,7 +14,7 @@ const DropdownAction = styled.button`
   cursor: pointer;
   padding: 10px;
   img{
-    margin-right: 10px;
+    margin-right: 2px;
   }
   span{
     font-size: 8px;
@@ -27,7 +27,11 @@ const DropdownAction = styled.button`
     }
   }
   ${({ theme }) => theme.MediaQueryMedium}{
+    border: 2px solid ${({ theme }) => theme.GreenLighter};
     padding: 15px 25px;
+    img{
+      margin-right: 10px;
+    }
     span{
       &.info{
         display: block;
@@ -56,6 +60,7 @@ const DropdownScreen = styled.div`
       }
       input{
         display: block;
+        font-size: 14px;
         width: 100%;
         color: #fff;
         box-sizing: border-box;
@@ -67,11 +72,30 @@ const DropdownScreen = styled.div`
         display: block;
         width: 100%;
         background-color: ${({ theme }) => theme.Gold};
-        border: 0 none;
+        border: 2px solid ${({ theme }) => theme.Gold};
         color: #fff;
         padding: 20px;
         text-align: center;
         font-size: ${({ theme }) => theme.TextCommon};
+        position: relative;
+        span{
+          position: relative;
+          z-index: 1;
+        }
+        &::before{
+          content: '';
+          position: absolute;
+          background-color: ${({ theme }) => theme.Green};
+          z-index: 0;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 0;
+          transition: width 0.3s;
+        }
+        &:hover::before{
+          width: 100%;
+        }
       }
     }
 `

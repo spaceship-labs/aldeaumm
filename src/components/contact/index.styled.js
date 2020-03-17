@@ -26,6 +26,7 @@ export const Form = styled.form`
   flex-wrap: wrap;
   input{
     width: 48%;
+    font-size: 13px;
     box-sizing: border-box;
     padding: 14px 15px;
     border: 1px solid #fff;
@@ -37,10 +38,33 @@ export const Form = styled.form`
     width: 48%;
     box-sizing: border-box;
     padding: 14px 15px;
-    border: 1px solid #fff;
+    border: 0 none;
     background-color: #fff;
     color: ${({ theme }) => theme.GreenDark};
     margin: 2% 0;
+    position: relative;
+    span{
+      position: relative;
+      z-index: 1;
+      transition: color 0.3s;
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      background-color: ${({ theme }) => theme.Green};
+      z-index: 0;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+      transition: width 0.3s;
+    }
+    &:hover{
+      color: #fff;
+      &::before{
+        width: 100%;
+      }
+    }
   }
 `
 

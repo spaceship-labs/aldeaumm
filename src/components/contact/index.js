@@ -8,18 +8,18 @@ import mail from "../../theme/images/mail.png"
 const ContactComponent = () => (
   <Section>
     <ContainerMedium>
-      <Title>Contáctanos</Title>
+      <Title className='wow fadeInLeft'>Contáctanos</Title>
       <Rows align='space-between' verticalAlign='center'>
         <ContactData>
-          <p><a href='/'><img src={phone} /> 998 877 6655</a></p>
-          <p><a href='/'><img src={mail} /> info@aldeaumm.com</a></p>
+          <p className='wow fadeInLeft'><a href='/'><img src={phone} /> 998 877 6655</a></p>
+          <p className='wow fadeInLeft'><a href='/'><img src={mail} /> info@aldeaumm.com</a></p>
         </ContactData>
         <Row width='100' widthSm="65%">
-          <Form>
+          <Form className='wow fadeInLeft' data-wow-delay='0.5s'>
             <input placeholder='Nombre' type='text' name='name' />
             <input placeholder='Teléfono' type='text' name='phone' />
             <input placeholder='Email' type='text' name='email' />
-            <button type='submit'>Enviar</button>
+            <button type='submit'><span>Enviar</span></button>
           </Form>
         </Row>
       </Rows>
