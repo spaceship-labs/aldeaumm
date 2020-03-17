@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import bg from "../../theme/images/aldea-umm-aereo.png"
+import bg from "../../theme/images/aldea-umm-render.jpg"
 import { Rows } from "../../theme/layout.styled"
 
 export const Banner = styled.div`
@@ -13,6 +13,16 @@ export const Banner = styled.div`
   color: ${({ theme }) => theme.GoldLight};
   background-size: cover;
   transition: height 0.3s;
+  &::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.5);
+    z-index: 0;
+  }
   ${({ theme }) => theme.MediaQueryMediumSmall}{
     height: 100vh;
     height: calc( 100vh - 114px );
@@ -75,6 +85,8 @@ export const BoxItem = styled.div`
 
 export const BoxRows = styled(Rows)`
   margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
   ${({ theme }) => theme.MediaQueryMediumSmall}{
     margin-bottom: 100px;
   }
