@@ -48,9 +48,11 @@ const config = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       inject: false,
-      template: HtmlWebpackTemplate,
+      meta: { viewport: 'width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1' },
+      //template: HtmlWebpackTemplate,
+      template: './index.html',
       appMountId: 'app',
-      title: 'Aldea Umm'
+      title: 'Aldea Umm',
     }),
     new CopyPlugin([
       { from: '_redirects', to: './' }

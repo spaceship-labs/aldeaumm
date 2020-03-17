@@ -20,4 +20,9 @@ function App() {
 }
 
 const rootElement = document.getElementById("app");
-ReactDOM.render(<App />, rootElement);
+//ReactDOM.render(<App />, rootElement);
+if (rootElement.hasChildNodes()) {
+  ReactDOM.hydrate(<App />, rootElement);
+} else {
+  ReactDOM.render(<App />, rootElement);
+}
