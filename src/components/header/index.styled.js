@@ -50,8 +50,25 @@ const Logo = styled.a`
   }
 `
 
+const Phone = styled.a`
+  margin-left: 40px;
+  margin-right: 40px;
+  text-decoration: none;
+  color: ${({ theme }) => theme.GreenDark};
+  display: none;
+  img{
+    display: inline-block;
+    width: 11px;
+    margin-right: 5px;
+  }
+  ${({ theme }) => theme.MediaQueryMedium}{
+    display: inline-block;
+  }
+`
+
 export {
-    Hamburguer,
-    Logo,
-    Header,
+  Hamburguer,
+  Logo,
+  Header,
+  Phone
 }
