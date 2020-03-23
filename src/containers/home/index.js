@@ -9,15 +9,17 @@ import FeatsComponent from "../../components/feats"
 import ContactComponent from "../../components/contact"
 import InvestComponent from "../../components/invest"
 
-const HomeContainer = () => <Layout>
-  <BannerComponent />
-  <SmallTextComponent />
-  <ZoneComponent />
-  <MapComponent />
-  <AmenitiesComponent />
-  <FeatsComponent />
-  <InvestComponent />
-  <ContactComponent />
-</Layout>
+const HomeContainer = () => <Layout render={({ methods }) => (
+  <React.Fragment>
+    <BannerComponent methods={methods} />
+    <SmallTextComponent />
+    <ZoneComponent />
+    <MapComponent />
+    <AmenitiesComponent />
+    <FeatsComponent />
+    <InvestComponent />
+    <ContactComponent />
+  </React.Fragment>
+) } />
 
 export default HomeContainer

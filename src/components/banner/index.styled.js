@@ -36,6 +36,7 @@ export const Button = styled.button`
   font-size: 18px;
   border: 0 none;
   position: relative;
+  cursor: pointer;
   span{
     position: relative;
     z-index: 1;

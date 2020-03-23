@@ -26,7 +26,7 @@ const boxes = [
   }
 ]
 
-const BannerComponent = () => {
+const BannerComponent = ({ methods }) => {
   return (
     <Section>
       <Container>
@@ -34,7 +34,7 @@ const BannerComponent = () => {
           <BoxRows mobileRow>
             {boxes.map(box => <BoxItemComponent key={box.title} {...box} />)}
           </BoxRows>
-          <Button className='wow fadeInLeft' data-wow-delay='1.5ss'><span>Invierte hoy</span></Button>
+          <Button onClick={methods.openModal} className='wow fadeInLeft' data-wow-delay='1.5ss'><span>Invierte hoy</span></Button>
         </Banner>
       </Container>
     </Section>

@@ -1,27 +1,18 @@
-import React, { useState } from "react"
+import React from "react"
 import { DropdownWrap, DropdownAction, DropdownScreen } from "./index.styled"
 import img from "../../theme/images/information.png"
+import SmallFormComponent from "../contactmodal/form"
 
-const DropdownComponent = () => {
-  const [ toggle, setToggle ] = useState(true)
-  const handleClick = () => {
-    const newToggle = !toggle
-    setToggle( newToggle )
-  }
+const DropdownComponent = ({ open, toggleDropdown }) => {
   return (
     <DropdownWrap>
-      <DropdownAction onClick={handleClick}>
+      <DropdownAction onClick={toggleDropdown}>
         <img src={img} />
         <span className='info'>Quiero más información</span>
         <span className='icon-arrow' />
       </DropdownAction>
-      <DropdownScreen open={toggle}>
-        <form>
-          <p><input type='text' name='name' placeholder='Nombre' /></p>
-          <p><input type='text' name='phone' placeholder='Teléfono' /></p>
-          <p><input type='text' name='email' placeholder='Email' /></p>
-          <button type='submit'><span>Enviar</span></button>
-        </form>
+      <DropdownScreen open={open}>
+        <SmallFormComponent />
       </DropdownScreen>
     </DropdownWrap>
   )

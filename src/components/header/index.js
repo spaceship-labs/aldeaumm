@@ -5,12 +5,12 @@ import LogoImg from "../../theme/images/aldea-umm.png"
 import DropdownComponent from "../dropdown"
 import phone from "../../theme/images/phone.png"
 
-const HeaderComponent = ({ sidebarToggle, handleToggleSidebar }) => <Header>
+const HeaderComponent = ({ globalConstants, methods }) => <Header>
   <Container>
     <Rows align='space-between' verticalAlign='center' mobileRow>
       <Row shrink>
         <Rows verticalAlign='center' mobileRow>
-          <Hamburguer open={sidebarToggle} onClick={handleToggleSidebar}>
+          <Hamburguer >
             <span className="lineTop"></span>
             <span className="lineMiddle"></span>
             <span className="lineBottom"></span>
@@ -23,7 +23,12 @@ const HeaderComponent = ({ sidebarToggle, handleToggleSidebar }) => <Header>
       <Row shrink>
         <Logo><img src={LogoImg} /></Logo>
       </Row>
-      <Row shrink><DropdownComponent /></Row>
+      <Row shrink>
+        <DropdownComponent
+          open={globalConstants.dropdown}
+          toggleDropdown={methods.toggleDropdown}
+        />
+      </Row>
     </Rows>
   </Container>
 </Header>
