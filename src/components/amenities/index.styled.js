@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { Section as SectionOrigin, Row } from "../../theme/layout.styled"
-import img from "../../theme/images/aldea-umm-park.png"
+import img from "../../theme/images/arq-pi-rend-1b.jpg"
 
 export const Section = styled(SectionOrigin)`
   background: linear-gradient(180deg,
@@ -59,7 +59,18 @@ export const Overlap = styled.div`
   z-index: 0;
   text-align: center;
   width: 90%;
+  &::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.25);
+    z-index: 0;
+  }
   h3{
+    position: relative;
     font-size: ${({ theme }) => theme.MobileTextMediumSubtitle};
     font-weight: normal;
   }

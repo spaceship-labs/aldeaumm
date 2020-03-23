@@ -10,6 +10,7 @@ const Black = '#4d4d4d';
 const Gray = '#cfd2d1';
 
 // Break points
+const CommonScreen = '1200';
 const MediumScreen = '960';
 const MediumSmallScreen = '600';
 const SmallScreen = '400';
@@ -25,6 +26,7 @@ export default {
   Black,
   Gray,
   // queries
+  MediaQueryCommon: `@media(min-width: ${CommonScreen}px)`,
   MediaQueryMedium: `@media(min-width: ${MediumScreen}px)`,
   MediaQueryMediumSmall: `@media(min-width: ${MediumSmallScreen}px)`,
   MediaQuerySmall: `@media(min-width: ${SmallScreen}px)`,

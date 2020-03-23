@@ -3,6 +3,7 @@ import { Section, ContainerLarge, Rows, Row } from "../../theme/layout.styled"
 import { Boxes, BoxGreen, BoxWhite, ImageBox } from "./index.styled"
 import invest from "../../theme/images/invest.png"
 import blueprint from "../../theme/images/blueprint.png"
+import img from "../../theme/images/leaf-yellow.png"
 
 const InvestComponent = () => (
   <Section>
@@ -10,6 +11,7 @@ const InvestComponent = () => (
       <Rows wrap>
         <Boxes>
           <BoxGreen>
+            <img src={img} />
             <h3 className='wow fadeInLeft'>Invierte en Aldea Umm:</h3>
             <p className='wow fadeInLeft'>Elige tu Lote Residencial</p>
           </BoxGreen>

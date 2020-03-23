@@ -1,18 +1,31 @@
 import styled from "styled-components"
-import img from "../../theme/images/aldea-umm-games.png"
+import img from "../../theme/images/casa-club-alberca.jpg"
 
 export const BoxText = styled.div`
   background-image: url(${img});
+  background-size: cover;
   color: #fff;
   box-sizing: border-box;
   margin-bottom: 20px;
   width: 100%;
   text-align: center;
   padding: 80px 20px;
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.25);
+    z-index: 0;
+  }
   h3{
+    position: relative;
     font-size: ${({ theme }) => theme.MobileTextCommonSubtitle};
     font-weight: normal;
-    margin: 0;
+    margin: 0;map
     em{
       font-style: italic;
       font-weight: bold;

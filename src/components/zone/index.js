@@ -1,7 +1,7 @@
 import React from "react"
 import { ContainerCommon, Rows } from "../../theme/layout.styled"
 import { SectioPadding, BoxText, BoxImage } from "./index.styled"
-import img from "../../theme/images/aldea-umm-park.png"
+import img from "../../theme/images/aldea-umm-aerial.jpg"
 
 const ZoneComponent = () => (
   <SectioPadding>

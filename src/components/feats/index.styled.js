@@ -1,11 +1,7 @@
 import styled from "styled-components"
 import { SectioPadding, Container as ContainerOrigin, Row } from "../../theme/layout.styled"
 
-export const Section = styled(SectioPadding)`
-  ${({ theme }) => theme.MediaQueryMedium}{
-    padding-bottom: 60px;
-  }
-`
+export const Section = styled(SectioPadding)``
 
 export const Container = styled(ContainerOrigin)`
   max-width: 1100px;
@@ -36,6 +32,17 @@ export const FeatsRows = styled(Row)`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  ${({ theme }) => theme.MediaQueryMedium}{
+    padding-left: 30px;
+  }
+`
+
+export const VideoRow = styled(Row)`
+  padding-top:30px;
+  video{
+    width: 100%;
+    max-width: 100%;
+  }
 `
 
 export const FeatItem = styled.div`

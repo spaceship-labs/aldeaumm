@@ -38,7 +38,7 @@ export const BoxText = styled.div`
     }
   }
   ${({ theme }) => theme.MediaQueryMedium}{
-    padding: 80px 70px;
+    padding: 60px 70px;
   }
 `
 
@@ -49,6 +49,7 @@ export const BoxImage = styled.div`
     img{
       max-width: 120%;
       max-width: calc( 100% + 70px );
+      max-width: 150%;
       float: right;
     }
   }

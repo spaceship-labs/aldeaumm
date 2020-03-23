@@ -27,6 +27,13 @@ export const BoxGreen = styled(Box)`
   justify-content: center;
   align-items: center;
   background-color: ${({ theme }) => theme.GreenLight};
+  position: relative;
+  img{
+    width: 120px;
+    position: absolute;
+    top: -90px;
+    margin: 0 auto;
+  }
   h3{
     font-size: ${({ theme }) => theme.MobileTextBigSubtitle};
     margin: 0;
@@ -39,13 +46,29 @@ export const BoxGreen = styled(Box)`
     margin: 0;
     font-weight: bold;
   }
+  ${({ theme }) => theme.MediaQueryMediumSmall}{
+    img{
+      right: -57px;
+    }
+  }
   ${({ theme }) => theme.MediaQueryMedium}{
     padding: 80px 100px;
+    img{
+      width: 150px;
+      top: -140px;
+      right: initial;
+    }
     h3{
       font-size: ${({ theme }) => theme.TextBigSubtitle};
     }
     p{
       font-size: ${({ theme }) => theme.TextCommonSubtitle};
+    }
+  }
+  ${({ theme }) => theme.MediaQueryCommon}{
+    img{
+      width: 170px;
+      top: -125px;
     }
   }
 `

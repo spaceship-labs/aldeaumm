@@ -1,12 +1,13 @@
 import React from "react"
-import { Rows } from "../../theme/layout.styled"
-import { Section, Container, FeatsRows, FeatItem, FeatImg } from "./index.styled"
+import { Rows, Container } from "../../theme/layout.styled"
+import { Section, FeatsRows, VideoRow, FeatItem } from "./index.styled"
 
-import img from "../../theme/images/leaf-yellow.png"
 import img1 from "../../theme/images/plusvalia.png"
 import img2 from "../../theme/images/ruta-de-los-cenotes.png"
 import img3 from "../../theme/images/barrera-de-arrecifes.png"
 import img4 from "../../theme/images/plaza-comercial.png"
+
+import video from "../../theme/videos/video-promocional-aldea-umm.mp4"
 
 const feats = [
   {
@@ -51,9 +52,12 @@ const FeatsComponent = () => (
             )
           }
         </FeatsRows>
-        <FeatImg widthM='40%'>
-          <img className='wow fadeInLeft' src={img} />
-        </FeatImg>
+        <VideoRow widthM='50%'>
+          {/*<video controls>
+            <source src={video} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>*/}
+        </VideoRow>
       </Rows>
     </Container>
   </Section>
