@@ -3,7 +3,7 @@ import { DropdownWrap, DropdownAction, DropdownScreen } from "./index.styled"
 import img from "../../theme/images/information.png"
 
 const DropdownComponent = () => {
-  const [ toggle, setToggle ] = useState(false)
+  const [ toggle, setToggle ] = useState(true)
   const handleClick = () => {
     const newToggle = !toggle
     setToggle( newToggle )
