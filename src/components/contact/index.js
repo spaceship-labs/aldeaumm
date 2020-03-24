@@ -8,8 +8,8 @@ import mail from "../../theme/images/mail.png"
 const ContactComponent = () => (
   <Section>
     <ContainerMedium>
-      <Title className='wow fadeInUp'>Contáctanos</Title>
-      <Rows align='space-between' verticalAlign='center' className='wow fadeInUp'>
+      <Title className='wow fadeInUpSpace'>Contáctanos</Title>
+      <Rows align='space-between' verticalAlign='center' className='wow fadeInUpSpace'>
         <ContactData>
           <p><a href='/'><img src={phone} /> 998 877 6655</a></p>
           <p><a href='/'><img src={mail} /> info@aldeaumm.com</a></p>

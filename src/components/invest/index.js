@@ -9,7 +9,7 @@ const InvestComponent = () => (
   <Section>
     <ContainerLarge>
       <Rows wrap>
-        <Boxes className='wow fadeInUp'>
+        <Boxes className='wow fadeInUpSpace'>
           <BoxGreen>
             <img src={img} />
             <h3 >Invierte en Aldea Umm:</h3>
@@ -26,7 +26,7 @@ const InvestComponent = () => (
             </Rows>
           </BoxWhite>
         </Boxes>
-        <ImageBox><img className='wow fadeInUp' data-wow-delay='.2s' src={blueprint} /></ImageBox>
+        <ImageBox><img className='wow fadeInUpSpace' data-wow-delay='.2s' src={blueprint} /></ImageBox>
       </Rows>
     </ContainerLarge>
   </Section>

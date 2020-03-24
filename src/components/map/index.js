@@ -7,10 +7,10 @@ const MapComponent = () => (
   <SectioPadding>
     <ContainerCommon>
       <Rows verticalAlign='center'>
-        <BoxText className='wow fadeInUp'>
+        <BoxText className='wow fadeInUpSpace'>
           <h3>Mapa de <em>Ubicación</em></h3>
         </BoxText>
-        <BoxMap className='wow fadeInUp' data-wow-delay='0.2s'>
+        <BoxMap className='wow fadeInUpSpace' data-wow-delay='0.2s'>
           <img src={img} />
         </BoxMap>
       </Rows>

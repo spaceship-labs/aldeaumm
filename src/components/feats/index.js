@@ -36,7 +36,7 @@ const FeatsComponent = () => (
   <Section>
     <Container>
       <Rows align='space-between' wrap>
-        <FeatsRows widthM='50%' className='wow fadeInUp'>
+        <FeatsRows widthM='50%' className='wow fadeInUpSpace'>
           {
             feats.map((feat, index) => (
               <FeatItem key={feat.title}>

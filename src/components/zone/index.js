@@ -7,7 +7,7 @@ const ZoneComponent = () => (
   <SectioPadding>
     <ContainerCommon>
       <Rows verticalAlign='center'>
-        <BoxText className='wow fadeInUp' >
+        <BoxText className='wow fadeInUpSpace' >
           <h3>Zona con alta plusvalía y ubicación privilegiada:</h3>
           <ul>
             <li><span>23</span> minutos de Cancún</li>
@@ -15,7 +15,7 @@ const ZoneComponent = () => (
             <li><span>15</span> minutos del aeropuerto de Cancún</li>
           </ul>
         </BoxText>
-        <BoxImage className='wow fadeInUp' data-wow-delay="0.2s">
+        <BoxImage className='wow fadeInUpSpace' data-wow-delay="0.2s">
           <img src={img} />
         </BoxImage>
       </Rows>

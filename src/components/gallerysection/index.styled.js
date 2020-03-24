@@ -29,7 +29,6 @@ export const SliderItem = styled.div`
 
 export const Arrow = styled.div`
   background-color: transparent!important;
-  transform: rotate( ${({ direction }) => direction === 'left' ? 180 : 0 }deg );
   width: 50px;
   height: 50px;
   top: calc( 50% - 25px );
@@ -43,6 +42,7 @@ export const Arrow = styled.div`
   }
   img{
     display: block;
+    transform: rotate( ${({ direction }) => direction === 'left' ? 180 : 0 }deg )!important;
   }
   ${({ theme }) => theme.MediaQueryMedium}{
     padding: 0;
