@@ -39,6 +39,10 @@ const Container = styled.div`
   position: relative;
 `
 
+const ContainerXLarge = styled(Container)`
+  max-width: 1650px;
+`
+
 const ContainerLarge = styled(Container)`
   max-width: 1350px;
 `
@@ -105,6 +109,7 @@ export {
   SectioPadding,
   SectioPaddingMedium,
   Container,
+  ContainerXLarge,
   ContainerLarge,
   ContainerCommon,
   ContainerMedium,

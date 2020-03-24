@@ -8,6 +8,7 @@ import AmenitiesComponent from "../../components/amenities"
 import FeatsComponent from "../../components/feats"
 import ContactComponent from "../../components/contact"
 import InvestComponent from "../../components/invest"
+import GallerySectionComponent from "../../components/gallerysection"
 
 const HomeContainer = () => <Layout render={({ methods }) => (
   <React.Fragment>
@@ -15,6 +16,7 @@ const HomeContainer = () => <Layout render={({ methods }) => (
     <SmallTextComponent />
     <ZoneComponent />
     <MapComponent />
+    <GallerySectionComponent />
     <AmenitiesComponent />
     <FeatsComponent />
     <InvestComponent />

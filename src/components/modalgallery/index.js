@@ -1,9 +1,6 @@
 import React, { useState } from "react"
 import Slider from "react-slick";
-
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
-import { Modal, Container, SliderWrapper, Overlay, SliderItem, Close } from "./inedx.styled";
+import { Modal, Container, SliderWrapper, Overlay, SliderItem, Close } from "./index.styled";
 
 const ModalGalleryComponent = ({ open, amenitie, closeModal }) => {
   const settings = {

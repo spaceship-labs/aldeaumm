@@ -6,6 +6,8 @@ import { Content } from "../theme/layout.styled"
 import FooterComponent from "../components/footer";
 import ContactModalComponent from "../components/contactmodal"
 import WOW from 'wowjs';
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 //const Layout = ({ children }) => {
 class Layout extends Component {

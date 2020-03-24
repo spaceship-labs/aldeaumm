@@ -1,12 +1,12 @@
 import React from "react"
-import { Container, Rows, Row } from "../../theme/layout.styled"
+import { ContainerXLarge, Rows, Row } from "../../theme/layout.styled"
 import { Header, Hamburguer, Logo, Phone } from "./index.styled"
 import LogoImg from "../../theme/images/aldea-umm.png"
 import DropdownComponent from "../dropdown"
 import phone from "../../theme/images/phone.png"
 
 const HeaderComponent = ({ globalConstants, methods }) => <Header>
-  <Container>
+  <ContainerXLarge>
     <Rows align='space-between' verticalAlign='center' mobileRow>
       <Row shrink>
         <Rows verticalAlign='center' mobileRow>
@@ -30,7 +30,7 @@ const HeaderComponent = ({ globalConstants, methods }) => <Header>
         />
       </Row>
     </Rows>
-  </Container>
+  </ContainerXLarge>
 </Header>
 
 export default HeaderComponent

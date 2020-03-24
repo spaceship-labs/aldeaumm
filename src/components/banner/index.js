@@ -1,5 +1,5 @@
 import React from "react"
-import { Section, Container } from "../../theme/layout.styled"
+import { Section, ContainerXLarge } from "../../theme/layout.styled"
 import { Banner, Button, BoxRows } from "./index.styled"
 import BoxItemComponent from "./boxitem"
 
@@ -27,14 +27,14 @@ const boxes = [
 const BannerComponent = ({ methods }) => {
   return (
     <Section>
-      <Container>
+      <ContainerXLarge>
         <Banner>
           <BoxRows mobileRow className='wow fadeInLeft'>
             {boxes.map(box => <BoxItemComponent key={box.title} {...box} />)}
           </BoxRows>
           <Button onClick={methods.openModal} className='wow fadeInLeft' data-wow-delay='1.5ss'><span>Invierte hoy</span></Button>
         </Banner>
-      </Container>
+      </ContainerXLarge>
     </Section>
   )
 }
