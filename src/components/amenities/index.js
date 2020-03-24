@@ -49,10 +49,10 @@ const amenities = [
 const AmenitiesComponent = () => (
   <Section>
     <ContainerCommon style={{zIndex:1}}>
-      <AmenitiesBox>
+      <AmenitiesBox className='wow fadeInLeft'>
         <h3 className='wow fadeInLeft'>Amenidades</h3>
         <Rows align='center' wrap mobileRow>
-          {amenities.map((amenitie,index) => <AmenitieComponent key={amenitie.title} delay={`${.3*index}s`} {...amenitie} /> )}
+          {amenities.map((amenitie,index) => <AmenitieComponent key={amenitie.title} {...amenitie} /> )}
         </Rows>
       </AmenitiesBox>
     </ContainerCommon>

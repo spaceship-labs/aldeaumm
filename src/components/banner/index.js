@@ -15,14 +15,12 @@ const boxes = [
     amount: '$799',
     suffix: '',
     footer: 'Mil pesos',
-    delay: '0.5s',
   },
   {
     title: 'Hasta',
     amount: '48',
     suffix: 'Meses sin',
     footer: 'Intereses',
-    delay: '1s',
   }
 ]
 
@@ -31,7 +29,7 @@ const BannerComponent = ({ methods }) => {
     <Section>
       <Container>
         <Banner>
-          <BoxRows mobileRow>
+          <BoxRows mobileRow className='wow fadeInLeft'>
             {boxes.map(box => <BoxItemComponent key={box.title} {...box} />)}
           </BoxRows>
           <Button onClick={methods.openModal} className='wow fadeInLeft' data-wow-delay='1.5ss'><span>Invierte hoy</span></Button>
