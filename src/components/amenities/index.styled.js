@@ -39,9 +39,15 @@ export const AmenitieItem = styled(Row)`
   color: ${({ theme }) => theme.GreenDark};
   font-size: ${({ theme }) => theme.MobileTextCommon};
   padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
   h4{
     margin: 20px 0;
     font-weight: normal;
+  }
+  &:hover{
+    background-color: #ead6c4;
+    transform: scale(1.1);
   }
   ${({ theme }) => theme.MediaQueryMediumSmall}{
     font-size: ${({ theme }) => theme.TextCommon};

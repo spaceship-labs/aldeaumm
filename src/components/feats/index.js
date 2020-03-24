@@ -49,10 +49,10 @@ const FeatsComponent = () => (
           }
         </FeatsRows>
         <VideoRow widthM='50%'>
-          {/*<video controls>
+          {<video controls>
             <source src={video} type="video/mp4" />
             Your browser does not support the video tag.
-          </video>*/}
+          </video>}
         </VideoRow>
       </Rows>
     </Container>
