@@ -30,8 +30,8 @@ class AmenitiesComponent extends Component {
     return (
       <Section>
         <ContainerCommon style={{ zIndex: 1 }}>
-          <AmenitiesBox className='wow fadeInLeft'>
-            <h3 className='wow fadeInLeft'>Amenidades</h3>
+          <AmenitiesBox className='wow fadeInUp'>
+            <h3>Amenidades</h3>
             <Rows align='center' wrap mobileRow>
               {Amenities.map(amenitie =>
                 <AmenitieComponent
@@ -45,7 +45,7 @@ class AmenitiesComponent extends Component {
         </ContainerCommon>
         <Container style={{ zIndex: 0 }}>
           <Overlap>
-            <h3 className='wow fadeInLeft'><em>Invierte en</em> <br /> Puerto Morelos</h3>
+            <h3 className='wow fadeInUp'><em>Invierte en</em> <br /> Puerto Morelos</h3>
           </Overlap>
         </Container>
         <ModalGalleryComponent

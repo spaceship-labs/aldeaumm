@@ -29,10 +29,10 @@ const BannerComponent = ({ methods }) => {
     <Section>
       <ContainerXLarge>
         <Banner>
-          <BoxRows mobileRow className='wow fadeInLeft'>
+          <BoxRows mobileRow className=''>
             {boxes.map(box => <BoxItemComponent key={box.title} {...box} />)}
           </BoxRows>
-          <Button onClick={methods.openModal} className='wow fadeInLeft' data-wow-delay='1.5ss'><span>Invierte hoy</span></Button>
+          <Button onClick={methods.openModal} className=''><span>Invierte hoy</span></Button>
         </Banner>
       </ContainerXLarge>
     </Section>
