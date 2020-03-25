@@ -28,7 +28,7 @@ class AmenitiesComponent extends Component {
   }
   render() {
     return (
-      <Section>
+      <Section id='amenidades'>
         <ContainerCommon style={{ zIndex: 1 }}>
           <AmenitiesBox className='wow fadeInUpSpace'>
             <h3>Amenidades</h3>

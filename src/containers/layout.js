@@ -38,11 +38,16 @@ class Layout extends Component {
     const newToggle = !this.state.dropdown
     this.setState({ dropdown: newToggle })
   }
+  scrollTo = (id) => {
+    const element = document.getElementById(id)
+    window.scroll({ top: element.offsetTop -50, let: 0, behavior: "smooth" })
+  }
   render() {
     const methods = {
       openModal: this.openModal,
       closeModal: this.closeModal,
       toggleDropdown: this.toggleDropdown,
+      scrollTo: this.scrollTo,
     }
     return (
       <ThemeProvider theme={Theme}>

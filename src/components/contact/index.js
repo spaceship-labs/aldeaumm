@@ -6,7 +6,7 @@ import phone from "../../theme/images/phone.png"
 import mail from "../../theme/images/mail.png"
 
 const ContactComponent = () => (
-  <Section>
+  <Section id='contacto'>
     <ContainerMedium>
       <Title className='wow fadeInUpSpace'>Contáctanos</Title>
       <Rows align='space-between' verticalAlign='center' className='wow fadeInUpSpace'>
