@@ -4,7 +4,7 @@ import { TextWrapper, OverlapImageContainer } from "./index.styled"
 import img from "../../theme/images/leaf.png"
 
 const SmallTextComponent = () => (
-  <SectioPadding>
+  <SectioPadding id='viveAldeaUm'>
     <ContainerSmall>
       <OverlapImageContainer>
         <img alt='' src={img} />

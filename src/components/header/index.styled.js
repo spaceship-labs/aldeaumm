@@ -4,9 +4,15 @@ import { Row as RowLayout } from "../../theme/layout.styled"
 const Header = styled.header`
   background-color: #fff;
   padding: 10px 0;
+  position: relative;
   ${({ theme }) => theme.MediaQueryMediumSmall}{
     padding: 20px 0;
   }
+`
+
+const MenuWrapper = styled.div`
+  position: relative;
+  display: inline-block;
 `
 
 const Hamburguer = styled.button`
@@ -41,6 +47,33 @@ const Hamburguer = styled.button`
   }
 `
 
+const Menu = styled.ul`
+  position: absolute;
+  z-index: 100;
+  width: 260px;
+  top: 100%;
+  background-color: ${({ theme }) => theme.GreenLightest};
+  margin: 0;
+  padding: 30px 20px 30px;
+  list-style: none;
+  transition: all .3s;
+  opacity: ${({ open }) => open ? 1 : 0};
+  visibility: ${({ open }) => open ? 'visible' : 'hidden'};
+  margin-top: ${({ open }) => open ? '0' : '20px'};
+  a,button{
+    font-size: 20px;
+    background-color: transparent;
+    border: 0 none;
+    color: ${({ theme }) => theme.GreenDark};
+    text-decoration: none;
+    display: block;
+    padding: 10px 5px;
+    width: 100%;
+    cursor: pointer;
+    text-align: left;
+  }
+`
+
 const Logo = styled.a`
   display: inline-block;
   padding: 0 15px;
@@ -67,7 +100,9 @@ const Phone = styled.a`
 `
 
 export {
+  MenuWrapper,
   Hamburguer,
+  Menu,
   Logo,
   Header,
   Phone

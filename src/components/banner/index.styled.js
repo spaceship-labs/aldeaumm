@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import bg from "../../theme/images/aldea-umm-render.jpg"
+import bg from "../../theme/images/p-30-acceso.jpg"
 import { Rows } from "../../theme/layout.styled"
 
 export const Banner = styled.div`
