@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Row } from "../../theme/layout.styled"
 
 export const Boxes = styled.div`
   display: flex;
@@ -117,4 +118,61 @@ export const ImageBox = styled.div`
       top: -75px;
     }
   }
+`
+
+export const BoxGold = styled(Row)`
+  background-color: ${({ theme }) => theme.Gold};
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 80px;
+  text-align: center;
+  *{
+    color: #fff;
+  }
+  img{
+    position: relative;
+    width: 150px;
+    margin-top: -140px;
+    margin-bottom: 20px;
+  }
+  h3{
+    font-size: ${({ theme }) => theme.MobileTextCommonSubtitle};
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  p{
+    font-size: ${({ theme }) => theme.MobileTextCommon};
+    margin: 0;
+    line-height: 1.8;
+  }
+  ${({ theme }) => theme.MediaQueryMedium}{
+    h3{
+      font-size: ${({ theme }) => theme.TextCommonSubtitle};
+    }
+    p{
+      font-size: ${({ theme }) => theme.TextCommon};
+    }
+  }
+`
+
+export const ImagesBox = styled(Row)`
+  position: relative;
+  min-height: 250px;
+  overflow: hidden;
+  ${({ theme }) => theme.MediaQueryMediumSmall}{
+    min-height: 350px;
+  }
+`
+export const ImageItem = styled.img`
+  min-width: 100%;
+  min-height: 100%;
+  max-width: unset;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: opacity .4s;
+  opacity: ${({ show }) => show ? 1 : 0};
 `

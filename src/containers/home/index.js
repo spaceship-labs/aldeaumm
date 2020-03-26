@@ -9,12 +9,14 @@ import FeatsComponent from "../../components/feats"
 import ContactComponent from "../../components/contact"
 import InvestComponent from "../../components/invest"
 import GallerySectionComponent from "../../components/gallerysection"
+import InvestLargeComponent from "../../components/invest/large"
 
 const HomeContainer = () => <Layout render={({ methods }) => (
   <React.Fragment>
     <BannerComponent methods={methods} />
     <SmallTextComponent />
     <ZoneComponent />
+    <InvestLargeComponent />
     <MapComponent />
     <GallerySectionComponent />
     <AmenitiesComponent />
