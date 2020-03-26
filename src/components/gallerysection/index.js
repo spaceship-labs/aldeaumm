@@ -25,7 +25,7 @@ const GallerySectionComponent = () => {
   }
   const images = [img1, img2, img3, img4]
   return (
-    <Section>
+    <Section id='galeria'>
       <ContainerCommon>
         <SliderWrapper>
           <Slider {...settings} >

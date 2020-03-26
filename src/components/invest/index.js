@@ -6,7 +6,7 @@ import blueprint from "../../theme/images/blueprint.png"
 import img from "../../theme/images/leaf-yellow.png"
 
 const InvestComponent = () => (
-  <Section>
+  <Section id='invierte'>
     <ContainerLarge>
       <Rows wrap>
         <Boxes className='wow fadeInUpSpace'>

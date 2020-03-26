@@ -4,7 +4,7 @@ import { BoxText, BoxMap } from "./index.styled"
 import img from "../../theme/images/map.png"
 
 const MapComponent = () => (
-  <SectioPadding>
+  <SectioPadding id='mapa'>
     <ContainerCommon>
       <Rows verticalAlign='center'>
         <BoxText className='wow fadeInUpSpace'>
