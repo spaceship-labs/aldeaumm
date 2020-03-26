@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Slider from "react-slick";
 import { Modal, Container, SliderWrapper, Overlay, SliderItem, Close } from "./index.styled";
 
@@ -9,11 +9,23 @@ const ModalGalleryComponent = ({ open, amenitie, closeModal }) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    adaptiveHeight: true
+    adaptiveHeight: true,
+    //lazyLoad: true,
   }
-  const gallery = <Slider {...settings} >
-    {amenitie.images && amenitie.images.map((img, index) => <SliderItem key={`image-gallery-${index}`}><img src={img} /></SliderItem>)}
-  </Slider>
+  const [gallery, setGallery] = useState(false)
+  useEffect(() => {
+    let timeout = setTimeout(() => {
+      const newGallery = <Slider {...settings} >
+        {amenitie.images && amenitie.images.map((img, index) =>
+          <SliderItem key={`image-gallery-${index}`}>
+            <img src={img} />
+          </SliderItem>
+        )}
+      </Slider>
+      setGallery(newGallery)
+    }, 500);
+    return () => clearTimeout(timeout);
+  })
   return (
     <Modal open={open}>
       <Overlay onClick={closeModal} />
