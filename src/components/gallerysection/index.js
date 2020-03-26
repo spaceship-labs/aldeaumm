@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import Slider from "react-slick";
 import { SliderWrapper, SliderItem } from "./index.styled";
-import { Section, ContainerCommon } from "../../theme/layout.styled";
+import { SectioPadding, ContainerCommon } from "../../theme/layout.styled";
 
 import img1 from "../../theme/images/amenities/casa-club-alberca.jpg"
 import img2 from "../../theme/images/amenities/casa-club-acceso.jpg"
@@ -25,7 +25,7 @@ const GallerySectionComponent = () => {
   }
   const images = [img1, img2, img3, img4]
   return (
-    <Section id='galeria'>
+    <SectioPadding id='galeria'>
       <ContainerCommon>
         <SliderWrapper>
           <Slider {...settings} >
@@ -35,7 +35,7 @@ const GallerySectionComponent = () => {
           </Slider>
         </SliderWrapper>
       </ContainerCommon>
-    </Section>
+    </SectioPadding>
 
   )
 }

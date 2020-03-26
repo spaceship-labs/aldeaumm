@@ -3,7 +3,7 @@ import { SectioPadding, ContainerLarge, Rows, Row } from "../../theme/layout.sty
 import { ImagesBox, ImageItem, BoxGold } from "./index.styled"
 import playa from "../../theme/images/playapuerto.jpg"
 import arecife from "../../theme/images/arrecife.jpg"
-import img from "../../theme/images/leaf.png"
+import img from "../../theme/images/leaf-beige.png"
 
 const InvestLargeComponent = () => {
   const [image, setImage] = useState(false)

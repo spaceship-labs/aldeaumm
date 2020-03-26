@@ -11,10 +11,6 @@ export const SliderWrapper = styled.div`
   .slick-list{
     transition: height .3s;
   }
-  margin-bottom: 46px;
-  ${({ theme }) => theme.MediaQueryMediumSmall}{
-    margin-bottom: 86px;
-  }
 `
 
 export const SliderItem = styled.div`

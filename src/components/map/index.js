@@ -1,10 +1,10 @@
 import React from "react"
-import { ContainerCommon, Rows, SectioPadding } from "../../theme/layout.styled"
+import { ContainerCommon, Rows, Section } from "../../theme/layout.styled"
 import { BoxText, BoxMap } from "./index.styled"
 import img from "../../theme/images/map.png"
 
 const MapComponent = () => (
-  <SectioPadding id='mapa'>
+  <Section id='mapa'>
     <ContainerCommon>
       <Rows verticalAlign='center'>
         <BoxText className='wow fadeInUpSpace'>
@@ -15,7 +15,7 @@ const MapComponent = () => (
         </BoxMap>
       </Rows>
     </ContainerCommon>
-  </SectioPadding>
+  </Section>
 )
 
 export default MapComponent
