@@ -4,8 +4,9 @@ import { Section, Title, Form, ContactData } from "./index.styled"
 
 import phone from "../../theme/images/phone.png"
 import mail from "../../theme/images/mail.png"
+import SmallFormComponent from "../contactmodal/form"
 
-const ContactComponent = () => (
+const ContactComponent = ({ sendMail }) => (
   <Section id='contacto'>
     <ContainerMedium>
       <Title className='wow fadeInUpSpace'>Contáctanos</Title>
@@ -16,10 +17,7 @@ const ContactComponent = () => (
         </ContactData>
         <Row width='100' widthSm="65%">
           <Form data-wow-delay='0.5s'>
-            <input placeholder='Nombre' type='text' name='name' />
-            <input placeholder='Teléfono' type='text' name='phone' />
-            <input placeholder='Email' type='text' name='email' />
-            <button type='submit'><span>Enviar</span></button>
+            <SmallFormComponent sendMail={sendMail} />
           </Form>
         </Row>
       </Rows>

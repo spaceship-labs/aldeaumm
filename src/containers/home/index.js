@@ -13,16 +13,16 @@ import InvestLargeComponent from "../../components/invest/large"
 
 const HomeContainer = () => <Layout render={({ methods }) => (
   <React.Fragment>
-    <BannerComponent methods={methods} />
+    <BannerComponent openModal={methods.openModal} />
     <SmallTextComponent />
-    <ZoneComponent />
+    <ZoneComponent openModal={methods.openModal} />
     <InvestLargeComponent />
     <MapComponent />
-    <GallerySectionComponent />
-    <AmenitiesComponent />
+    <GallerySectionComponent openModal={methods.openModal} />
+    <AmenitiesComponent openContactModal={methods.openModal} />
     <FeatsComponent />
     <InvestComponent />
-    <ContactComponent />
+    <ContactComponent sendMail={methods.sendMail} />
   </React.Fragment>
 ) } />
 

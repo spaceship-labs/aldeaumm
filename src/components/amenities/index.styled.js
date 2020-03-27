@@ -58,6 +58,7 @@ export const AmenitieItem = styled(Row)`
 export const Overlap = styled.div`
   background: ${({ theme }) => theme.GreenDark} url(${img}) no-repeat center center;
   background-size: cover;
+  position: relative;
   color: #fff;
   padding: 150px 0 100px;
   margin: 0 auto;
@@ -82,6 +83,10 @@ export const Overlap = styled.div`
   }
   em{
     font-weight: bold;
+  }
+  button{
+    margin-top: 40px;
+    margin-bottom: -60px;
   }
   ${({ theme }) => theme.MediaQueryMediumSmall}{
     padding: 300px 0 120px;

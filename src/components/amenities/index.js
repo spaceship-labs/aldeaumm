@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Container, ContainerCommon, Rows } from "../../theme/layout.styled"
+import { Container, ContainerCommon, Rows, ButtonGreenLighter } from "../../theme/layout.styled"
 import { Section, AmenitiesBox, Overlap } from "./index.styled"
 import AmenitieComponent from "./amenitie"
 
@@ -46,6 +46,9 @@ class AmenitiesComponent extends Component {
         <Container style={{ zIndex: 0 }}>
           <Overlap>
             <h3 className='wow fadeInUpSpace'><em>Invierte en</em> <br /> Puerto Morelos</h3>
+            <ButtonGreenLighter onClick={this.props.openContactModal}>
+              <span>Me interesa</span>
+            </ButtonGreenLighter>
           </Overlap>
         </Container>
         <ModalGalleryComponent

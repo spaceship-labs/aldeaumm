@@ -11,6 +11,10 @@ export const SliderWrapper = styled.div`
   .slick-list{
     transition: height .3s;
   }
+  button{
+    margin-top: -20px;
+    margin-bottom: 40px;
+  }
 `
 
 export const SliderItem = styled.div`

@@ -28,6 +28,7 @@ export const Banner = styled.div`
     padding: 0;
     height: 100vh;
     height: calc( 100vh - 114px );
+    min-height: 550px;
   }
 `
 export const Button = styled.button`

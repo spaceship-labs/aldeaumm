@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 const DropdownWrap = styled.div`
     position: relative;
+    float:right;
 `
 
 const DropdownAction = styled.button`
@@ -55,10 +56,8 @@ const DropdownScreen = styled.div`
     transition: all .3s;
     background: linear-gradient(180deg, ${({ theme }) => theme.Green} 0%, ${({ theme }) => theme.Green } 84%, rgba(0,0,0,0) 84%);
     form{
-      p{
-        margin: 0 0 15px 0;
-      }
       input{
+        margin: 0 0 15px 0;
         display: block;
         font-size: 14px;
         width: 100%;

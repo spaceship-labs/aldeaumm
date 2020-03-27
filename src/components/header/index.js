@@ -33,16 +33,17 @@ const HeaderComponent = ({ globalConstants, methods }) => {
               </Menu>
             </MenuWrapper>
             <Phone href="tel:9988 776 655">
-              <img src={phone} /> <span>9988 776 655</span>
+              <img src={phone} /> <span>Contacta al asesor 9988 776 655</span>
             </Phone>
           </Rows>
         </Row>
-        <Row shrink>
+        <Row shrink widthM='380px'>
           <Logo><img src={LogoImg} /></Logo>
         </Row>
-        <Row shrink>
+          <Row shrink widthM='380px'>
           <DropdownComponent
             open={globalConstants.dropdown}
+            sendMail={methods.sendMail}
             toggleDropdown={methods.toggleDropdown}
           />
         </Row>

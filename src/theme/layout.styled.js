@@ -83,23 +83,48 @@ const Row = styled.div`
   }
 `
 
-const ButtonBlue = styled.button`
-  border: 0 none;
-  background: linear-gradient(to right, rgba(54,215,251,1) 0%, rgba(47,124,239,1) 50%, rgba(24,65,153,1) 100%);
+const GoldButton = styled.button`
+  width: 80%;
   color: #fff;
-  display: inline-block;
-  padding: 10px 50px;
-  border-radius: 20px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-  border: 2px solid #fff;
-  transition: all .3s;
+  background-color: ${({ theme }) => theme.Gold};
+  padding: 15px;
+  font-size: 18px;
+  border: 0 none;
+  position: relative;
   cursor: pointer;
-  &:hover{
-    background: linear-gradient(to right, rgba(54,215,251,1) 0%, rgba(47,124,239,1) 100%);;
+  display: block;
+  margin: 0 auto;
+  span{
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
   }
+  &::before{
+    content: '';
+    position: absolute;
+    background-color: ${({ theme }) => theme.Green};
+    z-index: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    transition: width 0.3s;
+  }
+  &:hover{
+    color: #fff;
+    &::before{
+      width: 100%;
+    }
+  }
+  ${({ theme }) => theme.MediaQueryMediumSmall}{
+    max-width: 300px;
+    font-size: 22px;
+  }
+`
+
+const ButtonGreenLighter = styled(GoldButton)`
+  color: ${({ theme }) => theme.GreenDark};
+  background-color: ${({ theme }) => theme.GreenLighter};
 `
 
 export {
@@ -116,5 +141,6 @@ export {
   ContainerSmall,
   Rows,
   Row,
-  ButtonBlue,
+  GoldButton,
+  ButtonGreenLighter,
 }

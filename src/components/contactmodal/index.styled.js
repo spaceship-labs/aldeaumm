@@ -38,6 +38,7 @@ export const ModalFormContainer = styled.div`
         margin: 0 0 15px 0;
       }
       input{
+        margin: 0 0 15px 0;
         display: block;
         font-size: 14px;
         width: 100%;

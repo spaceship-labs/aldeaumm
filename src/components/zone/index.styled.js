@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { SectioPadding as SectioPaddingOrigin } from "../../theme/layout.styled"
+import { SectioPadding as SectioPaddingOrigin, ButtonGreenLighter } from "../../theme/layout.styled"
 
 export const SectioPadding = styled(SectioPaddingOrigin)`
   background-color: ${({theme}) => theme.GreenLight};
@@ -52,5 +52,12 @@ export const BoxImage = styled.div`
       max-width: 150%;
       float: right;
     }
+  }
+`
+
+export const Button = styled(ButtonGreenLighter)`
+  margin: 40px auto 0px;
+  ${({ theme }) => theme.MediaQueryMediumSmall}{
+    margin: 40px auto -40px;
   }
 `

@@ -20,10 +20,12 @@ export const Title = styled.h3`
   }
 `
 
-export const Form = styled.form`
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+export const Form = styled.div`
+  form{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
   input{
     width: 48%;
     font-size: 13px;

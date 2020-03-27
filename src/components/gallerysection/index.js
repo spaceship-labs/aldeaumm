@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import Slider from "react-slick";
 import { SliderWrapper, SliderItem } from "./index.styled";
-import { SectioPadding, ContainerCommon } from "../../theme/layout.styled";
+import { SectioPadding, ContainerCommon, ButtonGreenLighter } from "../../theme/layout.styled";
 
 import img1 from "../../theme/images/amenities/casa-club-alberca.jpg"
 import img2 from "../../theme/images/amenities/casa-club-acceso.jpg"
@@ -12,7 +12,7 @@ import ArrowComponent from "./arrow";
 const ArrowLeft = <ArrowComponent direction='left' />
 const ArrowRight = <ArrowComponent direction='right' />
 
-const GallerySectionComponent = () => {
+const GallerySectionComponent = ({ openModal}) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -28,6 +28,9 @@ const GallerySectionComponent = () => {
     <SectioPadding id='galeria'>
       <ContainerCommon>
         <SliderWrapper>
+          <ButtonGreenLighter onClick={openModal}>
+            <span>Conoce más</span>
+          </ButtonGreenLighter>
           <Slider {...settings} >
             {images.map((img, index) =>
               <SliderItem key={`image-single-gallery-${index}`}><img src={img} /></SliderItem>

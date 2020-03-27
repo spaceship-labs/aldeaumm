@@ -55,7 +55,8 @@ const config = {
       title: 'Aldea Umm',
     }),
     new CopyPlugin([
-      { from: '_redirects', to: './' }
+      { from: '_redirects', to: './' },
+      { from: 'favicon.ico', to: './' }
     ])
   ],
 };

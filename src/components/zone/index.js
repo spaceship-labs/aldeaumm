@@ -1,9 +1,9 @@
 import React from "react"
 import { ContainerCommon, Rows } from "../../theme/layout.styled"
-import { SectioPadding, BoxText, BoxImage } from "./index.styled"
+import { SectioPadding, BoxText, BoxImage, Button } from "./index.styled"
 import img from "../../theme/images/aldea-umm-aerial.jpg"
 
-const ZoneComponent = () => (
+const ZoneComponent = ({ openModal }) => (
   <SectioPadding>
     <ContainerCommon>
       <Rows verticalAlign='center'>
@@ -19,6 +19,7 @@ const ZoneComponent = () => (
           <img src={img} />
         </BoxImage>
       </Rows>
+      <Button className='wow fadeInUpSpace' onClick={openModal}><span>Quiero saber más</span></Button>
     </ContainerCommon>
   </SectioPadding>
 )

@@ -84,8 +84,7 @@ const Logo = styled.a`
 `
 
 const Phone = styled.a`
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 30px;
   text-decoration: none;
   color: ${({ theme }) => theme.GreenDark};
   display: none;

@@ -24,7 +24,7 @@ const boxes = [
   }
 ]
 
-const BannerComponent = ({ methods }) => {
+const BannerComponent = ({ openModal }) => {
   return (
     <Section>
       <ContainerXLarge>
@@ -33,7 +33,7 @@ const BannerComponent = ({ methods }) => {
           <BoxRows mobileRow className=''>
             {boxes.map(box => <BoxItemComponent key={box.title} {...box} />)}
           </BoxRows>
-          <Button onClick={methods.openModal} className=''><span>Invierte hoy</span></Button>
+          <Button onClick={openModal} className=''><span>Invierte hoy</span></Button>
         </Banner>
       </ContainerXLarge>
     </Section>
