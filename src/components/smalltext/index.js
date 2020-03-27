@@ -10,7 +10,7 @@ const SmallTextComponent = () => (
         <img alt='' src={img} />
       </OverlapImageContainer>
       <TextWrapper className='wow fadeInUpSpace'>
-        <p>Vive en completa sincría con la naturaleza, a 5 minutos de la playa, en el corazón de la Riviera Maya:</p>
+        <p>Vive en completa sincronía con la naturaleza, a 5 minutos de la playa, en el corazón de la Riviera Maya.</p>
         <h3>¡Vive en Aldea Umm!</h3>
       </TextWrapper>
     </ContainerSmall>

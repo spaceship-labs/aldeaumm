@@ -12,22 +12,22 @@ import video from "../../theme/videos/video-promocional-aldea-umm.mp4"
 const feats = [
   {
     img: img1,
-    title: '20% de la plusvalía',
+    title: '20% de la plusvalía.',
     subtitle: 'Incremento anual del',
   },
   {
     img: img2,
-    title: 'Ruta de los Cenotes',
+    title: 'Ruta de los Cenotes.',
     subtitle: 'A 5 min. de la entrada de la',
   },
   {
     img: img3,
-    title: 'arrecifes más larga del mundo',
+    title: 'arrecifes más larga del mundo.',
     subtitle: 'La segunda barrera de',
   },
   {
     img: img4,
-    title: 'Plaza comercial más grande de méxico',
+    title: 'plaza comercial más grande de México.',
     subtitle: 'A 3 min. de la segunda',
   },
 ]

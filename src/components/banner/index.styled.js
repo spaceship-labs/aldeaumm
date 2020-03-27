@@ -13,6 +13,7 @@ export const Banner = styled.div`
   color: ${({ theme }) => theme.GoldLight};
   background-size: cover;
   transition: height 0.3s;
+  padding: 40px 0 50px;
   &::before{
     content: '';
     position: absolute;
@@ -24,6 +25,7 @@ export const Banner = styled.div`
     z-index: 0;
   }
   ${({ theme }) => theme.MediaQueryMediumSmall}{
+    padding: 0;
     height: 100vh;
     height: calc( 100vh - 114px );
   }
@@ -88,9 +90,6 @@ export const BoxRows = styled(Rows)`
   margin-bottom: 50px;
   position: relative;
   z-index: 1;
-  ${({ theme }) => theme.MediaQueryMediumSmall}{
-    margin-bottom: 100px;
-  }
 `
 
 export const BoxItemTitle = styled.p`
@@ -128,5 +127,18 @@ export const BoxItemFooter = styled.p`
   font-weight: bold;
   ${({ theme }) => theme.MediaQueryMedium}{
     font-size: 20px;
+  }
+`
+
+export const Title = styled.h1`
+  color: #fff;
+  position: relative;
+  font-size: ${({ theme }) => theme.MobileTextMediumSubtitle};
+  width: 90%;
+  text-align: center;
+  margin: 20px 0;
+  max-width: 650px;
+  ${({ theme }) => theme.MediaQueryMediumSmall}{
+    font-size: ${({ theme }) => theme.TextMediumSubtitle};
   }
 `

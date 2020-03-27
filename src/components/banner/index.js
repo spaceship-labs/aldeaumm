@@ -1,6 +1,6 @@
 import React from "react"
 import { Section, ContainerXLarge } from "../../theme/layout.styled"
-import { Banner, Button, BoxRows } from "./index.styled"
+import { Banner, Button, BoxRows, Title } from "./index.styled"
 import BoxItemComponent from "./boxitem"
 
 const boxes = [
@@ -29,6 +29,7 @@ const BannerComponent = ({ methods }) => {
     <Section>
       <ContainerXLarge>
         <Banner>
+          <Title>Invierte en un terreno, construye la casa de tus sueños</Title>
           <BoxRows mobileRow className=''>
             {boxes.map(box => <BoxItemComponent key={box.title} {...box} />)}
           </BoxRows>

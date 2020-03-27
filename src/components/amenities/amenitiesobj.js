@@ -49,7 +49,7 @@ export default [
   },
   {
     img: img5,
-    title: 'Gimnacio al aire libre',
+    title: 'Gimnasio al aire libre',
     images: [img10, img11, img24]
   },
   {
@@ -64,7 +64,7 @@ export default [
   },
   {
     img: img8,
-    title: 'Casa club con gimnacio',
+    title: 'Casa club con gimnasio',
     images: [img20, img21, img22]
   },
 ]
