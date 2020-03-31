@@ -132,14 +132,15 @@ export const BoxItemFooter = styled.p`
 `
 
 export const Title = styled.h1`
-  color: #fff;
+  color: ${({ theme }) => theme.GoldLight};
   position: relative;
   font-size: ${({ theme }) => theme.MobileTextMediumSubtitle};
+  font-weight: normal;
   width: 90%;
   text-align: center;
   margin: 20px 0;
   max-width: 650px;
   ${({ theme }) => theme.MediaQueryMediumSmall}{
-    font-size: ${({ theme }) => theme.TextMediumSubtitle};
+    font-size: 35px;
   }
 `

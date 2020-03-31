@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { ContainerCommon } from "../../theme/layout.styled"
+import { ContainerLarge as ContainerCommon } from "../../theme/layout.styled"
 
 export const Modal = styled.div`
   position: fixed;
@@ -50,7 +50,8 @@ export const SliderItem = styled.div`
   justify-content: center;
   align-items: center;
   img{
-    max-height: 80vh;
+    max-height: ${({ fullScreen }) => fullScreen === true ? 90 : 80}vh;
+    width: ${({ fullScreen }) => fullScreen === true ? '100%' : 'auto'};
   }
 `
 

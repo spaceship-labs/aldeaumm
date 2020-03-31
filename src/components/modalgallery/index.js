@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import Slider from "react-slick";
 import { Modal, Container, SliderWrapper, Overlay, SliderItem, Close } from "./index.styled";
 
-const ModalGalleryComponent = ({ open, amenitie, closeModal }) => {
+const ModalGalleryComponent = ({ open, fullScreen, amenitie, closeModal }) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -17,7 +17,7 @@ const ModalGalleryComponent = ({ open, amenitie, closeModal }) => {
     let timeout = setTimeout(() => {
       const newGallery = <Slider {...settings} >
         {amenitie.images && amenitie.images.map((img, index) =>
-          <SliderItem key={`image-gallery-${index}`}>
+          <SliderItem fullScreen={fullScreen} key={`image-gallery-${index}`}>
             <img src={img} />
           </SliderItem>
         )}
@@ -32,7 +32,7 @@ const ModalGalleryComponent = ({ open, amenitie, closeModal }) => {
       <Close onClick={closeModal}>x</Close>
       <Container>
         <SliderWrapper>
-          <h3>{amenitie.title}</h3>
+          {amenitie.title ? (<h3>{amenitie.title}</h3>) : ''}
           { open && amenitie && amenitie.images.length > 0 && gallery }
         </SliderWrapper>
       </Container>

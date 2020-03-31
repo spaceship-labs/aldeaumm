@@ -24,16 +24,17 @@ const HeaderComponent = ({ globalConstants, methods }) => {
                 <span className="lineBottom"></span>
               </Hamburguer>
                 <Menu open={menu}>
-                <li><button onClick={() => methods.scrollTo('viveAldeaUm')}>Vive en Aldea Umm</button></li>
-                <li><button onClick={() => methods.scrollTo('mapa')}>Mapa de Ubicación</button></li>
-                <li><button onClick={() => methods.scrollTo('galeria')}>Galería</button></li>
-                <li><button onClick={() => methods.scrollTo('amenidades')}>Amenidades</button></li>
-                <li><button onClick={() => methods.scrollTo('invierte')}>Invierte en Aldea Umm</button></li>
-                <li><button onClick={() => methods.scrollTo('contacto')}>Contacto</button></li>
+                  <li><button onClick={() => methods.scrollTo('viveAldeaUm')}>Vive en Aldea Umm</button></li>
+                  <li><button onClick={() => methods.scrollTo('mapa')}>Mapa de Ubicación</button></li>
+                  <li><button onClick={() => methods.scrollTo('galeria')}>Galería</button></li>
+                  <li><button onClick={() => methods.scrollTo('amenidades')}>Amenidades</button></li>
+                  <li><button onClick={() => methods.scrollTo('invierte')}>Invierte en Aldea Umm</button></li>
+                  <li><button onClick={() => methods.scrollTo('contacto')}>Contacto</button></li>
+                  <li><a href="https://map.aldeaumm.com/">Lotes disponibles</a></li>
               </Menu>
             </MenuWrapper>
-            <Phone href="tel:9988 776 655">
-              <img src={phone} /> <span>Contacta al asesor 9988 776 655</span>
+            <Phone href="tel:+5219988022151">
+                <img src={phone} /> <span>Contacta a un asesor (998) 802 21 51</span>
             </Phone>
           </Rows>
         </Row>

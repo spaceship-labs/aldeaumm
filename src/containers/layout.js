@@ -24,6 +24,12 @@ class Layout extends Component {
   componentDidMount() {
     //const wow = WOW.WOW();wow.init();
     new WOW.WOW().init()
+    if (window && window.location.hash) {
+      const hash = window.location.hash
+      setTimeout(() => {
+        this.scrollTo(hash.replace('#', ''))
+      }, 1500);
+    }
   }
   openModal = () => {
     this.setState({
@@ -52,12 +58,27 @@ class Layout extends Component {
       messageModal: false,
     })
   }
-  sendMail = (e) => {
+  sendMail = (e,data) => {
     e.preventDefault()
-    this.setState({
-      modal: false,
-      dropdown: false,
-      messageModal: true,
+    if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(data.email)) {
+      alert(`Favor de agregar un email válido \npor ejemplo juan@gmail.com`)
+      return
+    }
+    console.log('DATA', data)
+    fetch("https://aldeaumm.com/envio2.php", {
+      method: "post",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then(response => {
+      console.log('RESPONSE', response)
+      this.setState({
+        modal: false,
+        dropdown: false,
+        messageModal: true,
+        message: response.ok ? 'success' : 'error',
+      })
     })
   }
   render() {

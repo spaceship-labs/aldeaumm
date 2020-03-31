@@ -5,7 +5,7 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
-const config = {
+const config = (env) => ({
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -27,9 +27,11 @@ const config = {
         ],
       }, {
         test: /\.(png|svg|jpg|gif|mp4)$/,
-        use: [
-          'file-loader'
-        ]
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'images'
+        }
       }, {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: [
@@ -50,7 +52,7 @@ const config = {
       inject: false,
       meta: { viewport: 'width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1' },
       //template: HtmlWebpackTemplate,
-      template: './index.html',
+      template: env === 'prod' ? './indexproduction.html' : './index.html',
       appMountId: 'app',
       title: 'Aldea Umm',
     }),
@@ -59,6 +61,6 @@ const config = {
       { from: 'favicon.ico', to: './' }
     ])
   ],
-};
+});
 
 module.exports = config;

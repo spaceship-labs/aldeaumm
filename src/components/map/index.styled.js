@@ -46,7 +46,7 @@ export const BoxText = styled.div`
 
 export const BoxMap = styled.div`
   z-index:1;
-  img{
+  img, iframe{
     width: 100%;
   }
   ${({ theme }) => theme.MediaQueryMediumSmall}{
