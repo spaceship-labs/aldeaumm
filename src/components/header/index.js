@@ -1,16 +1,18 @@
 import React, { useState } from "react"
 import { ContainerXLarge, Rows, Row } from "../../theme/layout.styled"
-import { Header, MenuWrapper, Hamburguer, Menu, Logo, Phone } from "./index.styled"
+import { Header, MenuWrapper, Hamburguer, Menu, Logo, Phone, LanguageSwitch } from "./index.styled"
 import LogoImg from "../../theme/images/aldea-umm.png"
 import DropdownComponent from "../dropdown"
 import phone from "../../theme/images/phone.png"
 
-const HeaderComponent = ({ globalConstants, methods }) => {
+const HeaderComponent = ({ lang, globalConstants, methods }) => {
   const [menu, setMenu] = useState(false)
   const toggleMenu = () => {
     const newMenu = !menu
     setMenu(newMenu)
   }
+  const esp = lang === 'es' ? 'Esp' : 'Esp'
+  const eng = lang === 'es' ? 'Eng' : 'Eng'
   return (
   <Header>
     <ContainerXLarge>
@@ -24,17 +26,78 @@ const HeaderComponent = ({ globalConstants, methods }) => {
                 <span className="lineBottom"></span>
               </Hamburguer>
                 <Menu open={menu}>
-                  <li><button onClick={() => methods.scrollTo('viveAldeaUm')}>Vive en Aldea Umm</button></li>
-                  <li><button onClick={() => methods.scrollTo('mapa')}>Mapa de Ubicación</button></li>
-                  <li><button onClick={() => methods.scrollTo('galeria')}>Galería</button></li>
-                  <li><button onClick={() => methods.scrollTo('amenidades')}>Amenidades</button></li>
-                  <li><button onClick={() => methods.scrollTo('invierte')}>Invierte en Aldea Umm</button></li>
-                  <li><button onClick={() => methods.scrollTo('contacto')}>Contacto</button></li>
-                  <li><a href="https://map.aldeaumm.com/">Lotes disponibles</a></li>
+                  <li><button onClick={() => methods.scrollTo('viveAldeaUm')}>
+                    {
+                      lang === 'es' 
+                        ? 'Vive en Aldea Umm'
+                        : 'Living in Aldea Umm'
+                    }
+                  </button></li>
+                  <li><button onClick={() => methods.scrollTo('mapa')}>
+                    {
+                      lang === 'es'
+                        ? 'Mapa de Ubicación'
+                        : 'Location'
+                    }
+                  </button></li>
+                  <li><button onClick={() => methods.scrollTo('galeria')}>
+                    {
+                      lang === 'es'
+                        ? 'Galería'
+                        : 'Gallery'
+                    }
+                  </button></li>
+                  <li><button onClick={() => methods.scrollTo('amenidades')}>
+                    {
+                      lang === 'es'
+                        ? 'Amenidades'
+                        : 'Amenities'
+                    }
+                  </button></li>
+                  <li><button onClick={() => methods.scrollTo('invierte')}>
+                    {
+                      lang === 'es'
+                        ? 'Invierte en Aldea Umm'
+                        : 'Invest in Aldea Umm'
+                    }
+                  </button></li>
+                  <li><button onClick={() => methods.scrollTo('contacto')}>
+                    {
+                      lang === 'es'
+                        ? 'Contacto'
+                        : 'Contact us'
+                    }
+                  </button></li>
+                  <li><a href="https://map.aldeaumm.com/">
+                    {
+                      lang === 'es'
+                        ? 'Lotes disponibles'
+                        : 'Availability'
+                    }
+                  </a></li>
+                  <LanguageSwitch>
+                    {
+                      lang === 'en'
+                        ? (<a href='/'>{esp}</a>)
+                        : (<span>{esp}</span>)
+                    }
+                    <span> | </span>
+                    {
+                      lang === 'es'
+                        ? (<a href='/en'>{eng}</a>)
+                        : (<span>{eng}</span>)
+                    }
+                  </LanguageSwitch>
               </Menu>
             </MenuWrapper>
             <Phone href="tel:+5219988022151">
-                <img src={phone} /> <span>Contacta a un asesor (998) 802 21 51</span>
+                <img src={phone} /> <span>
+                  {
+                    lang === 'es'
+                      ? 'Contacta a un asesor '
+                      : 'Contact our sales rep '
+                  }
+                  (998) 802 21 51</span>
             </Phone>
           </Rows>
         </Row>
@@ -42,11 +105,12 @@ const HeaderComponent = ({ globalConstants, methods }) => {
           <Logo><img src={LogoImg} /></Logo>
         </Row>
           <Row shrink widthM='380px'>
-          <DropdownComponent
-            open={globalConstants.dropdown}
-            sendMail={methods.sendMail}
-            toggleDropdown={methods.toggleDropdown}
-          />
+            <DropdownComponent
+              lang={lang}
+              open={globalConstants.dropdown}
+              sendMail={methods.sendMail}
+              toggleDropdown={methods.toggleDropdown}
+            />
         </Row>
       </Rows>
     </ContainerXLarge>

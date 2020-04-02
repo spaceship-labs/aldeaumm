@@ -2,12 +2,18 @@ import React from "react"
 import { ModalContainer, ModalOverlay, ModalFormContainer, Title } from "./index.styled"
 import SmallFormComponent from "./form"
 
-const ContactModalComponent = ({ open, closeModal, sendMail }) => (
+const ContactModalComponent = ({ lang, open, closeModal, sendMail }) => (
   <ModalContainer open={open}>
     <ModalOverlay onClick={closeModal} />
     <ModalFormContainer>
-      <Title>Contáctanos</Title>
-      <SmallFormComponent sendMail={sendMail} />
+      <Title>
+        {
+          lang === 'es'
+            ? 'Contáctanos'
+            : 'Contact us'
+        }
+      </Title>
+      <SmallFormComponent lang={lang} sendMail={sendMail} />
     </ModalFormContainer>
   </ModalContainer>
 )

@@ -52,7 +52,13 @@ class GallerySectionComponent extends Component {
         <ContainerCommon>
           <SliderWrapper>
             <ButtonGreenLighter onClick={this.props.openModal}>
-              <span>Conoce más</span>
+              <span>
+                {
+                  this.props.lang === 'es'
+                    ? 'Conoce más'
+                    : 'Learn more'
+                }
+              </span>
             </ButtonGreenLighter>
             <Slider {...settings} >
               {images.map((img, index) =>

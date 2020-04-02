@@ -5,7 +5,7 @@ import playa from "../../theme/images/playapuerto.jpg"
 import arecife from "../../theme/images/arrecife.jpg"
 import img from "../../theme/images/leaf-beige.png"
 
-const InvestLargeComponent = () => {
+const InvestLargeComponent = ({ lang }) => {
   const [image, setImage] = useState(false)
   useEffect(() => {
     let interval = setInterval(() => {
@@ -24,8 +24,20 @@ const InvestLargeComponent = () => {
           </ImagesBox>
           <BoxGold widthM='50%'>
             <img src={img} />
-            <h3>¡Invierte en Puerto Morelos!</h3>
-            <p>Vive en completa sincronía con la naturaleza, a 5 minutos de la playa, en el corazón de la Riviera Maya.</p>
+            <h3>
+              {
+                lang === 'es'
+                  ? '¡Invierte en Puerto Morelos!'
+                  : 'Invest in Puerto Morelos!'
+              }
+            </h3>
+            <p>
+              {
+                lang === 'es'
+                  ? 'Vive en completa sincronía con la naturaleza, a 5 minutos de la playa, en el corazón de la Riviera Maya.'
+                  : 'Live in complete harmony with nature, 5 minutes from the beach… in the heart of Riviera Maya.'
+              }
+            </p>
           </BoxGold>
         </Rows>
       </ContainerLarge>

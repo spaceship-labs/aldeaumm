@@ -11,18 +11,18 @@ import InvestComponent from "../../components/invest"
 import GallerySectionComponent from "../../components/gallerysection"
 import InvestLargeComponent from "../../components/invest/large"
 
-const HomeContainer = () => <Layout render={({ methods }) => (
+const HomeContainer = ({ lang }) => <Layout lang={lang} render={({ methods }) => (
   <React.Fragment>
-    <BannerComponent openModal={methods.openModal} />
-    <SmallTextComponent />
-    <ZoneComponent openModal={methods.openModal} />
-    <InvestLargeComponent />
-    <MapComponent />
-    <GallerySectionComponent openModal={methods.openModal} />
-    <AmenitiesComponent openContactModal={methods.openModal} />
-    <FeatsComponent />
-    <InvestComponent />
-    <ContactComponent sendMail={methods.sendMail} />
+    <BannerComponent openModal={methods.openModal} lang={lang} />
+    <SmallTextComponent lang={lang} />
+    <ZoneComponent openModal={methods.openModal} lang={lang} />
+    <InvestLargeComponent lang={lang} />
+    <MapComponent lang={lang} />
+    <GallerySectionComponent openModal={methods.openModal} lang={lang} />
+    <AmenitiesComponent openContactModal={methods.openModal} lang={lang} />
+    <FeatsComponent lang={lang} />
+    <InvestComponent lang={lang} />
+    <ContactComponent sendMail={methods.sendMail} lang={lang} />
   </React.Fragment>
 ) } />
 

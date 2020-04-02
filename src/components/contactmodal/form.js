@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-const SmallFormComponent = ({ sendMail }) => {
+const SmallFormComponent = ({ lang, sendMail }) => {
   const [data, setData] = useState({
     nombre: '',
     email: '',
@@ -16,10 +16,16 @@ const SmallFormComponent = ({ sendMail }) => {
   }
   return (
     <form onSubmit={(e) => sendMail(e, data)}>
-      <input type='text' name='nombre' onChange={inputChange} placeholder='Nombre' />
-      <input type='text' name='telefono' onChange={inputChange} placeholder='Teléfono' />
+      <input type='text' name='nombre' onChange={inputChange} placeholder={lang === 'es' ?'Nombre':'Name'} />
+      <input type='text' name='telefono' onChange={inputChange} placeholder={lang === 'es' ? 'Teléfono' : 'Phone number'} />
       <input type='email' name='email' onChange={inputChange} placeholder='Email' />
-      <button type='submit'><span>Enviar</span></button>
+      <button type='submit'><span>
+        {
+          lang === 'es'
+            ? 'Enviar'
+            : 'Send'
+        }
+      </span></button>
     </form>
   )
 }

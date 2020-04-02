@@ -31,9 +31,15 @@ class AmenitiesComponent extends Component {
       <Section id='amenidades'>
         <ContainerCommon style={{ zIndex: 1 }}>
           <AmenitiesBox className='wow fadeInUpSpace'>
-            <h3>Amenidades</h3>
+            <h3>
+              {
+                this.props.lang === 'es'
+                  ? 'Amenidades'
+                  : 'Amenities'
+              }
+            </h3>
             <Rows align='center' wrap mobileRow>
-              {Amenities.map(amenitie =>
+              {Amenities[this.props.lang].map(amenitie =>
                 <AmenitieComponent
                   openModal={() => this.openModal(amenitie)}
                   key={amenitie.title}
@@ -45,9 +51,23 @@ class AmenitiesComponent extends Component {
         </ContainerCommon>
         <Container style={{ zIndex: 0 }}>
           <Overlap>
-            <h3 className='wow fadeInUpSpace'><em>Invierte en</em> <br /> Puerto Morelos</h3>
+            <h3 className='wow fadeInUpSpace'>
+              <em>
+                {
+                  this.props.lang === 'es'
+                    ? 'Invierte en'
+                    : 'Invest in'
+                }
+              </em> <br />
+              Puerto Morelos</h3>
             <ButtonGreenLighter onClick={this.props.openContactModal}>
-              <span>Me interesa</span>
+              <span>
+                {
+                  this.props.lang === 'es'
+                    ? 'Me interesa'
+                    : 'I’m interested'
+                }
+              </span>
             </ButtonGreenLighter>
           </Overlap>
         </Container>

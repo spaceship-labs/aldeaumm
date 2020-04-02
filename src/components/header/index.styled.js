@@ -60,7 +60,7 @@ const Menu = styled.ul`
   opacity: ${({ open }) => open ? 1 : 0};
   visibility: ${({ open }) => open ? 'visible' : 'hidden'};
   margin-top: ${({ open }) => open ? '0' : '20px'};
-  a,button{
+  a, button, span{
     font-size: 20px;
     background-color: transparent;
     border: 0 none;
@@ -69,8 +69,10 @@ const Menu = styled.ul`
     display: block;
     padding: 10px 5px;
     width: 100%;
-    cursor: pointer;
     text-align: left;
+  }
+  a,button{
+    cursor: pointer;
   }
 `
 
@@ -98,11 +100,22 @@ const Phone = styled.a`
   }
 `
 
+const LanguageSwitch = styled.li`
+display: flex;
+justify-content: flex-end;
+  a,span{
+    display: inline-block;
+    width: auto;
+    padding-left: 15px;
+  }
+`
+
 export {
   MenuWrapper,
   Hamburguer,
   Menu,
   Logo,
   Header,
-  Phone
+  Phone,
+  LanguageSwitch,
 }

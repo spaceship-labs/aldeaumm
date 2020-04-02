@@ -3,12 +3,18 @@ import { ContainerCommon, Rows, Section } from "../../theme/layout.styled"
 import { BoxText, BoxMap } from "./index.styled"
 import img from "../../theme/images/map.png"
 
-const MapComponent = () => (
+const MapComponent = ({ lang }) => (
   <Section id='mapa'>
     <ContainerCommon>
       <Rows verticalAlign='center'>
         <BoxText className='wow fadeInUpSpace'>
-          <h3>Mapa de <em>Ubicación</em></h3>
+          <h3>
+            {
+              lang === 'es'
+                ? <React.Fragment>Mapa de <em>Ubicación</em></React.Fragment>
+                : <em>Location</em>
+            }
+          </h3>
         </BoxText>
         <BoxMap className='wow fadeInUpSpace' data-wow-delay='0.2s'>
           <iframe

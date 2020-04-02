@@ -26,45 +26,89 @@ import img24 from "../../theme/images/amenities/gimnasio-al-aire-libre.jpg"
 import img25 from "../../theme/images/amenities/jardin-del-arte.jpg"
 import img26 from "../../theme/images/amenities/petfriendly.jpg"
 
-export default [
-  {
-    img: img1,
-    title: 'Alberca',
-    images: [img21, img23]
-  },
-  {
-    img: img2,
-    title: 'Juegos infantiles',
-    images: [img9, img17, img18]
-  },
-  {
-    img: img3,
-    title: 'Parque pet friendly',
-    images: [img26]
-  },
-  {
-    img: img4,
-    title: 'Jardín de arte',
-    images: [img13, img14, img25]
-  },
-  {
-    img: img5,
-    title: 'Gimnasio al aire libre',
-    images: [img10, img11, img24]
-  },
-  {
-    img: img6,
-    title: 'Cancha deportiva',
-    images: [img19, img22]
-  },
-  {
-    img: img7,
-    title: 'Parque de fuentes',
-    images: [img15, img16]
-  },
-  {
-    img: img8,
-    title: 'Casa club con gimnasio',
-    images: [img20, img21, img22]
-  },
-]
+export default {
+  es: [
+    {
+      img: img1,
+      title: 'Alberca',
+      images: [img21, img23]
+    },
+    {
+      img: img2,
+      title: 'Juegos infantiles',
+      images: [img9, img17, img18]
+    },
+    {
+      img: img3,
+      title: 'Parque pet friendly',
+      images: [img26]
+    },
+    {
+      img: img4,
+      title: 'Jardín de arte',
+      images: [img13, img14, img25]
+    },
+    {
+      img: img5,
+      title: 'Gimnasio al aire libre',
+      images: [img10, img11, img24]
+    },
+    {
+      img: img6,
+      title: 'Cancha deportiva',
+      images: [img19, img22]
+    },
+    {
+      img: img7,
+      title: 'Parque de fuentes',
+      images: [img15, img16]
+    },
+    {
+      img: img8,
+      title: 'Casa club con gimnasio',
+      images: [img20, img21, img22]
+    },
+  ],
+  en: [
+    {
+      img: img1,
+      title: 'Swimming pool',
+      images: [img21, img23]
+    },
+    {
+      img: img2,
+      title: 'Children’s park',
+      images: [img9, img17, img18]
+    },
+    {
+      img: img3,
+      title: 'Pet friendly park',
+      images: [img26]
+    },
+    {
+      img: img4,
+      title: 'Gardens',
+      images: [img13, img14, img25]
+    },
+    {
+      img: img5,
+      title: 'Open air gym',
+      images: [img10, img11, img24]
+    },
+    {
+      img: img6,
+      title: 'Sports court',
+      images: [img19, img22]
+    },
+    {
+      img: img7,
+      title: 'Fountains',
+      images: [img15, img16]
+    },
+    {
+      img: img8,
+      title: 'Clubhouse with gym',
+      images: [img20, img21, img22]
+    },
+  ]
+}

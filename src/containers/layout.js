@@ -64,7 +64,7 @@ class Layout extends Component {
       alert(`Favor de agregar un email válido \npor ejemplo juan@gmail.com`)
       return
     }
-    console.log('DATA', data)
+    //console.log('DATA', data)
     fetch("https://aldeaumm.com/envio2.php", {
       method: "post",
       body: JSON.stringify(data),
@@ -72,7 +72,7 @@ class Layout extends Component {
         "Content-Type": "application/json",
       },
     }).then(response => {
-      console.log('RESPONSE', response)
+      //console.log('RESPONSE', response)
       this.setState({
         modal: false,
         dropdown: false,
@@ -94,6 +94,7 @@ class Layout extends Component {
         <HeaderComponent
           globalConstants={this.state}
           methods={methods}
+          lang={this.props.lang}
         />
         <Content>
           {/*this.props.children*/}
@@ -102,8 +103,18 @@ class Layout extends Component {
             methods: methods
           })}
           <FooterComponent />
-          <ContactModalComponent open={this.state.modal} sendMail={this.sendMail} closeModal={this.closeModal} />
-          <ContactMessageComponent open={this.state.messageModal} message={this.state.message} closeModal={this.closeAll} />
+          <ContactModalComponent
+            lang={this.props.lang}
+            open={this.state.modal}
+            sendMail={this.sendMail}
+            closeModal={this.closeModal}
+          />
+          <ContactMessageComponent
+            lang={this.props.lang}
+            open={this.state.messageModal}
+            message={this.state.message}
+            closeModal={this.closeAll}
+          />
         </Content>
       </ThemeProvider>
     )
