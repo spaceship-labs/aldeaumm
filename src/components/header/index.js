@@ -75,6 +75,9 @@ const HeaderComponent = ({ lang, globalConstants, methods }) => {
                         : 'Availability'
                     }
                   </a></li>
+                  <li><a href={`https://aldeaumm.com/blog/${lang==='en' ? 'en/' : ''}`}>
+                    Blog
+                  </a></li>
                   <LanguageSwitch>
                     {
                       lang === 'en'
@@ -90,14 +93,14 @@ const HeaderComponent = ({ lang, globalConstants, methods }) => {
                   </LanguageSwitch>
               </Menu>
             </MenuWrapper>
-            <Phone href="tel:+5219988022151">
+              <Phone href="tel:+5219982089352">
                 <img src={phone} /> <span>
                   {
                     lang === 'es'
                       ? 'Contacta a un asesor '
                       : 'Contact our sales rep '
                   }
-                  (998) 802 21 51</span>
+                  (998) 208 93 52 </span>
             </Phone>
           </Rows>
         </Row>

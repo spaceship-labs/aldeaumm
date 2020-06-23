@@ -90,3 +90,17 @@ export const Title = styled.h3`
     font-size: ${({ theme }) => theme.TextCommonSubtitle};
   }
 `
+export const Close = styled.button`
+  border: 1px solid #fff;
+  color: #fff;
+  background: ${({ theme }) => theme.Gold};
+  border-radius: 50%;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  cursor: pointer;
+`

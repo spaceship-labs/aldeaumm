@@ -2,7 +2,20 @@ import styled from "styled-components"
 
 const DropdownWrap = styled.div`
     position: relative;
-    float:right;
+    float: right;
+`
+
+const MobileOverlay = styled.div`
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  display: ${({ open }) => open ? 'block' : 'none'};
+  ${({ theme }) => theme.MediaQueryMediumSmall}{
+    display: none;
+  }
 `
 
 const DropdownAction = styled.button`
@@ -14,6 +27,8 @@ const DropdownAction = styled.button`
   font-weight: bold;
   cursor: pointer;
   padding: 10px;
+  position: relative;
+  z-index: 1;
   img{
     margin-right: 2px;
   }
@@ -100,7 +115,8 @@ const DropdownScreen = styled.div`
 `
 
 export {
-    DropdownWrap,
-    DropdownAction,
-    DropdownScreen
+  DropdownWrap,
+  MobileOverlay,
+  DropdownAction,
+  DropdownScreen
 }

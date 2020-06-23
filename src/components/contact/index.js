@@ -18,6 +18,7 @@ const ContactComponent = ({ lang, sendMail }) => (
       </Title>
       <Rows align='space-between' verticalAlign='center' className='wow fadeInUpSpace'>
         <ContactData>
+          <p><a href='tel:+5219982089352'><img src={phone} /> +52 1 (998) 208 93 52</a></p>
           <p><a href='https://wa.me/529981470854'><img src={phone} /> +52 1 (998) 147 08 54</a></p>
           <p><a href='tel:+5219988022151'><img src={phone} /> +52 1 (998) 802 21 51</a></p>
           <p><a href='tel:+5219982677878'><img src={phone} /> +52 1 (998) 267 78 78</a></p>

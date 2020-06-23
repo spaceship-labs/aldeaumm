@@ -1,11 +1,12 @@
 import React from "react"
-import { DropdownWrap, DropdownAction, DropdownScreen } from "./index.styled"
+import { DropdownWrap, MobileOverlay, DropdownAction, DropdownScreen } from "./index.styled"
 import img from "../../theme/images/information.png"
 import SmallFormComponent from "../contactmodal/form"
 
 const DropdownComponent = ({ lang, open, toggleDropdown, sendMail }) => {
   return (
     <DropdownWrap>
+      <MobileOverlay open={open} onClick={toggleDropdown} />
       <DropdownAction onClick={toggleDropdown}>
         <img src={img} />
         <span className='info'>

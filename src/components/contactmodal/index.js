@@ -1,5 +1,5 @@
 import React from "react"
-import { ModalContainer, ModalOverlay, ModalFormContainer, Title } from "./index.styled"
+import { ModalContainer, ModalOverlay, ModalFormContainer, Title, Close } from "./index.styled"
 import SmallFormComponent from "./form"
 
 const ContactModalComponent = ({ lang, open, closeModal, sendMail }) => (
@@ -13,6 +13,7 @@ const ContactModalComponent = ({ lang, open, closeModal, sendMail }) => (
             : 'Contact us'
         }
       </Title>
+      <Close onClick={closeModal}>X</Close>
       <SmallFormComponent lang={lang} sendMail={sendMail} />
     </ModalFormContainer>
   </ModalContainer>
